@@ -34,11 +34,32 @@ resolver: lts-12.16
 #  - auto-update
 #  - wai
 packages:
-- .
+  - .
+
 # Dependency packages to be pulled from upstream that are not in the resolver
 # using the same syntax as the packages field.
 # (e.g., acme-missiles-0.3)
-# extra-deps: []
+extra-deps:
+  - tensorflow-haskell/tensorflow
+  - tensorflow-haskell/tensorflow-ops
+  - tensorflow-haskell/tensorflow-core-ops
+  - tensorflow-haskell/tensorflow-logging
+  - tensorflow-haskell/tensorflow-proto
+  - tensorflow-haskell/tensorflow-opgen
+  - tensorflow-haskell/tensorflow-test
+  - tensorflow-haskell/tensorflow-mnist
+  - tensorflow-haskell/tensorflow-mnist-input-data
+    # subdirs:
+    #   - tensorflow
+    #   - tensorflow-ops
+    #   - tensorflow-core-ops
+    #   - tensorflow-logging
+    #   - tensorflow-proto
+    #   - tensorflow-opgen
+    #   - tensorflow-test
+    #   - tensorflow-mnist
+    #   - tensorflow-mnist-input-data
+
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
@@ -58,8 +79,10 @@ packages:
 # arch: x86_64
 #
 # Extra directories used by stack for building
-# extra-include-dirs: [/path/to/dir]
-# extra-lib-dirs: [/path/to/dir]
+# extra-include-dirs:
+# - /usr/local/include 
+# extra-lib-dirs:
+# - /usr/local/include 
 #
 # Allow a newer minor version of GHC than the snapshot specifies
 # compiler-check: newer-minor

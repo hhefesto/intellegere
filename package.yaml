@@ -4,7 +4,7 @@ github:              "hhefesto/intellegere"
 license:             BSD3
 author:              "hhefesto"
 maintainer:          "hhefesto@rdataa.com"
-copyright:           "BSD-3"
+copyright:           "BSD-2"
 
 extra-source-files:
 - README.md
@@ -21,6 +21,15 @@ description:         Please see the README on GitHub at <https://github.com/hhef
 
 dependencies:
 - base >= 4.7 && < 5
+- tensorflow
+- tensorflow-ops
+- tensorflow-core-ops
+- tensorflow-logging
+- tensorflow-mnist
+- proto-lens
+
+extra-deps:
+- tensorflow-haskell
 
 library:
   source-dirs: src
